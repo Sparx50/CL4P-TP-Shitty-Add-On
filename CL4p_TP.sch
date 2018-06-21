@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:badgelife_shitty_connector
+LIBS:CL4p_TP-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -134,13 +135,13 @@ $EndComp
 $Comp
 L LED D8
 U 1 1 5AFFA31C
-P 2800 3250
-F 0 "D8" H 2800 3350 50  0000 C CNN
-F 1 "LED" H 2800 3150 50  0000 C CNN
-F 2 "LEDs:LED_1206_HandSoldering" H 2800 3250 50  0001 C CNN
-F 3 "" H 2800 3250 50  0001 C CNN
-	1    2800 3250
-	1    0    0    -1  
+P 2000 3250
+F 0 "D8" H 2000 3350 50  0000 C CNN
+F 1 "LED" H 2000 3150 50  0000 C CNN
+F 2 "LEDs:LED_1206_HandSoldering" H 2000 3250 50  0001 C CNN
+F 3 "" H 2000 3250 50  0001 C CNN
+	1    2000 3250
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R1
@@ -222,12 +223,12 @@ $EndComp
 $Comp
 L R R8
 U 1 1 5AFFA9E1
-P 3250 3250
-F 0 "R8" V 3330 3250 50  0000 C CNN
-F 1 "220" V 3250 3250 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 3180 3250 50  0001 C CNN
-F 3 "" H 3250 3250 50  0001 C CNN
-	1    3250 3250
+P 1550 3250
+F 0 "R8" V 1630 3250 50  0000 C CNN
+F 1 "220" V 1550 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1480 3250 50  0001 C CNN
+F 3 "" H 1550 3250 50  0001 C CNN
+	1    1550 3250
 	0    1    1    0   
 $EndComp
 $Comp
@@ -400,8 +401,6 @@ Wire Wire Line
 Wire Wire Line
 	3400 3150 3550 3150
 Wire Wire Line
-	3400 3250 3550 3250
-Wire Wire Line
 	3400 3550 3550 3550
 Wire Wire Line
 	3400 3650 3550 3650
@@ -416,8 +415,6 @@ Wire Wire Line
 Wire Wire Line
 	3400 4150 3550 4150
 Wire Wire Line
-	2950 3250 3100 3250
-Wire Wire Line
 	2950 3150 3100 3150
 Wire Wire Line
 	2950 3050 3100 3050
@@ -428,8 +425,6 @@ Wire Wire Line
 Wire Wire Line
 	2950 2750 3100 2750
 Connection ~ 2350 3450
-Wire Wire Line
-	2650 3250 2350 3250
 Connection ~ 2350 3250
 Wire Wire Line
 	2650 3150 2350 3150
@@ -464,11 +459,28 @@ Wire Wire Line
 	4550 4150 4700 4150
 Connection ~ 4700 4150
 Wire Wire Line
-	3400 3450 3550 3450
-Wire Wire Line
 	3100 3450 2950 3450
 Wire Wire Line
 	2650 3450 2350 3450
 Wire Wire Line
 	2350 2550 2350 4400
+Wire Wire Line
+	2150 3250 2350 3250
+Wire Wire Line
+	1700 3250 1850 3250
+$Comp
+L +3.3V #PWR010
+U 1 1 5B2AF0E0
+P 1400 3250
+F 0 "#PWR010" H 1400 3100 50  0001 C CNN
+F 1 "+3.3V" H 1400 3390 50  0000 C CNN
+F 2 "" H 1400 3250 50  0001 C CNN
+F 3 "" H 1400 3250 50  0001 C CNN
+	1    1400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3250 3400 3250
+Wire Wire Line
+	3400 3250 3400 3450
 $EndSCHEMATC
